@@ -1,0 +1,9 @@
+{
+	"name": "ADF-DEV-Misbah",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b5f933d2-145f-4d67-81a0-cef202dd7f62",
+		"tenantId": "a3dbbdb9-c038-49f4-b689-11226285e580"
+	}
+}
