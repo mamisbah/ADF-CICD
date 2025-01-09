@@ -8,11 +8,23 @@
 		"LSdevAzureBlobStorage_connectionString": {
 			"value": ""
 		},
+		"SqlServerLS_password": {
+			"value": ""
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://KV-Dev-Misbah.vault.azure.net/"
 		},
 		"AzureKeyVault2_properties_typeProperties_baseUrl": {
 			"value": "https://KV-Dev-Misbah.vault.azure.net/"
+		},
+		"SqlServerLS_properties_typeProperties_server": {
+			"value": "adfmssqlserver.database.windows.net"
+		},
+		"SqlServerLS_properties_typeProperties_database": {
+			"value": "adf_test_db"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"value": "mamisbah"
 		}
 	}
 }
