@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "copyPipeline",
 	"properties": {
 		"activities": [
 			{
@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -49,7 +49,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "employeeInputDataset",
+						"referenceName": "EmployeeDOJDataset",
 						"type": "DatasetReference"
 					}
 				],
@@ -59,6 +59,43 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "pipelineReturnValue",
+					"value": [
+						{
+							"key": "pipelineName",
+							"value": {
+								"type": "String",
+								"content": "copyPipeline"
+							}
+						},
+						{
+							"key": "RunId",
+							"value": {
+								"type": "Expression",
+								"content": "@pipeline().RunId"
+							}
+						}
+					],
+					"setSystemVariable": true
+				}
 			}
 		],
 		"annotations": []
