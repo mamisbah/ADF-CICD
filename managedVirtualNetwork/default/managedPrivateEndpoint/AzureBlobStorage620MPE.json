@@ -1,0 +1,7 @@
+{
+	"name": "AzureBlobStorage620MPE",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/aeeff95b-ec29-4ec7-9a6d-f92f53110266/resourceGroups/RG-DEV/providers/Microsoft.Storage/storageAccounts/bsdevmisbah",
+		"groupId": "blob"
+	}
+}
